@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoppingCart | Checkout</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Shop/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="../auth.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="../index.html">ShoppingCart</a>
+        <nav aria-label="Main navigation">
+            <a href="../index.html">Home</a>
+            <a href="../Shop/index.html" data-auth-only hidden>Shop</a>
+            <a href="../cart/index.html" data-auth-only hidden>My Cart</a>
+            <a href="../profile/index.html" data-auth-only hidden>Profile</a>
+            <button class="button secondary small-btn" type="button" data-auth-only data-logout data-home="../index.html" hidden>Logout</button>
+        </nav>
+    </header>
+
+    <main class="checkout-page">
+        <section class="checkout-card">
+            <div class="checkout-icon" aria-hidden="true">✓</div>
+            <h1>Checkout</h1>
+            <p class="muted">Review your total before continuing to payment.</p>
+            <div class="checkout-total"><span>Order total</span><strong id="checkout-total">$0.00</strong></div>
+            <button class="button primary full" type="button" id="rzp-button1">Pay with Razorpay</button>
+            <p id="checkout-message" class="form-message" aria-live="polite"></p>
+            <a class="back-link" href="../cart/index.html">Return to cart</a>
+        </section>
+    </main>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+</html>

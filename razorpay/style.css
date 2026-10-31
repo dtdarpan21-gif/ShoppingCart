@@ -1,0 +1,12 @@
+body{background:#f7f8fc}
+.checkout-page{max-width:520px;margin:55px auto;padding:0 20px}
+.checkout-page{display:block;grid-template-columns:none}
+.checkout-card{text-align:center;background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:35px;box-shadow:0 12px 35px #1118270a}
+.checkout-icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#dcfce7;color:#15803d;font-size:25px;margin:0 auto 18px}
+.checkout-card h1{margin:0 0 8px}
+.checkout-card>.muted{font-size:14px}
+.checkout-total{display:flex;justify-content:space-between;padding:20px 0;margin:22px 0;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb}
+.checkout-total strong{font-size:20px}
+.checkout-note{font-size:12px;line-height:1.6;color:#6b7280;margin:18px 0}
+.back-link{display:inline-block;color:#4f46e5;font-size:13px;margin-top:18px}
+.checkout-card .form-message{line-height:1.5}

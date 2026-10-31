@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ShoppingCart | Profile</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Shop/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="../auth.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="topbar"><a class="brand" href="../index.html">ShoppingCart</a>
+        <nav id="site-nav">
+            <a href="../index.html">Home</a>
+            <a href="../Shop/index.html" data-auth-only hidden>Shop</a>
+            <a href="../cart/index.html" data-auth-only hidden>My Cart</a>
+            <a class="active" href="index.html" data-auth-only hidden>Profile</a>
+            <button id="logout-btn" data-logout data-home="../index.html" class="button secondary small-btn" data-auth-only hidden>Logout</button>
+        </nav>
+    </header>
+    <main class="profile-page">
+        <section class="profile-card">
+            <div class="profile-heading">
+                <div class="avatar" id="avatar">U</div>
+                <div><h1>My Profile</h1>
+                    <p class="muted">Manage your account information.</p>
+                </div>
+            </div>
+            <form id="profile-form">
+                <div class="profile-fields"><div>
+                    <label for="firstName">First name</label>
+                    <input class="field" id="firstName" required>
+                </div>
+                <div>
+                    <label for="lastName">Last name</label>
+                    <input class="field" id="lastName" required>
+                </div>
+                <div class="wide">
+                    <label for="email">Email address</label>
+                    <input class="field" id="email" type="email" disabled></div>
+                    <div class="wide">
+                        <label for="phone">Phone (optional)</label>
+                        <input class="field" id="phone" type="tel" placeholder="Add phone number"></div>
+                        <div class="wide">
+                            <label for="address">Address (optional)</label>
+                            <textarea class="field" id="address" rows="3" placeholder="Add your delivery address"></textarea>
+                        </div>
+                    </div>
+                    <p id="profile-message" class="form-message" aria-live="polite"></p>
+                    <div class="profile-actions">
+                        <button class="button primary" type="submit">Save changes</button>
+                        <button class="button danger" id="delete-account" type="button">Delete account</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
+    </html>

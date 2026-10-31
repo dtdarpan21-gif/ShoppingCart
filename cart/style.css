@@ -1,0 +1,37 @@
+body{background:#f7f8fc}
+.cart-page{max-width:1120px;margin:38px auto;padding:0 24px}
+.cart-page{display:block;grid-template-columns:none}
+.page-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.page-title h1{font-size:30px;margin:0 0 8px}.page-title p{margin:0}
+.cart-layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:24px;align-items:start}
+.cart-items,.order-summary{background:#fff;border:1px solid #e5e7eb;border-radius:14px}
+.cart-item{display:flex;align-items:center;gap:18px;padding:20px;border-bottom:1px solid #e5e7eb}
+.cart-item:last-child{border-bottom:0}
+.cart-item>img{width:90px;height:95px;object-fit:contain}
+.cart-item-details{flex:1;min-width:0}
+.cart-item-details h3{font-size:14px;margin:6px 0 10px}
+.cart-item-details>strong{font-size:14px}.line-total{white-space:nowrap}
+.quantity-controls{display:flex;align-items:center;gap:10px;margin-top:12px}
+.quantity-controls button{border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer;padding:4px 9px}
+.quantity-controls .remove-button{border:0;color:#b91c1c;margin-left:5px}
+.order-summary{padding:22px}
+.order-summary h2{font-size:18px;margin:0 0 22px}
+.summary-row{display:flex;justify-content:space-between;gap:10px;margin:15px 0;font-size:14px;color:#4b5563}
+.summary-row.total{font-size:17px;font-weight:700;color:#111827}
+.order-summary hr{border:0;border-top:1px solid #e5e7eb}
+.cart-empty{text-align:center;padding:55px 20px}
+.cart-empty h2{margin-top:0}
+.cart-empty p{margin-bottom:24px}
+.button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+@media(max-width:800px){
+    .cart-layout{grid-template-columns:1fr}
+    .order-summary{order:-1}
+    .page-title{align-items:flex-start;gap:12px;flex-wrap:wrap}}
+
+
+    @media(max-width:480px){
+        .cart-item{padding:13px;gap:10px;align-items:flex-start}
+        .cart-item>img{width:60px;height:70px}
+        .line-total{font-size:12px}
+        .quantity-controls{gap:6px;flex-wrap:wrap}
+        .cart-page{padding:0 12px}}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ShoppingCart | My Cart</title><link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Shop/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="../auth.js"></script>
+    <script defer src="script.js"></script></head>
+    <body>
+        <header class="topbar"><a class="brand" href="../index.html">ShoppingCart</a>
+            <nav id="site-nav"><a href="../index.html">Home</a>
+                <a href="../Shop/index.html" data-auth-only hidden>Shop</a>
+                <a class="active" href="index.html" data-auth-only hidden>My Cart</a>
+                <a href="../profile/index.html" data-auth-only hidden>Profile</a>
+                <button id="logout-btn" data-logout data-home="../index.html" class="button secondary small-btn" data-auth-only hidden>Logout</button></nav>
+            </header><main class="cart-page"><div class="page-title"><div><h1>My Cart</h1>
+                <p class="muted">Review your items before checkout.</p></div>
+                <a class="button secondary" href="../Shop/index.html">Continue shopping</a></div>
+                <div class="cart-layout"><section id="cart-items" class="cart-items"></section>
+                    <aside class="order-summary"><h2>Order summary</h2><div class="summary-row"><span>Items</span>
+                        <span id="item-count">0</span></div>
+                        <div class="summary-row"><span>Subtotal</span>
+                            <span id="subtotal">$0.00</span></div>
+                            <div class="summary-row"><span>Shipping</span>
+                                <span id="shipping">Free</span></div><hr><div class="summary-row total"><span>Total</span>
+                                    <span id="total">$0.00</span></div><button id="checkout-btn" class="button primary full">Proceed to checkout</button>
+                                    <p id="cart-message" class="form-message" aria-live="polite"></p>
+                                </aside>
+                            </div>
+                        </main>
+                    </body>
+                    </html>
